@@ -12,7 +12,7 @@ import javafx.stage.Stage;
  * Permite gestionar la información ingresada y agregarla a una lista de personas,
  * o cancelar la operación y cerrar la ventana modal.
  */
-public class ModalHController {
+public class modalI {
     @FXML
     private TextField txtNombre;
 

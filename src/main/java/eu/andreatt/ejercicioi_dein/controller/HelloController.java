@@ -123,10 +123,10 @@ public class HelloController {
      */
     private void mostrarFormularioPersona(String titulo, Persona persona) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/eu/andreatt/ejercicioh_dein/fxml/modalH.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/eu/andreatt/ejercicioi_dein/fxml/modalI.fxml"));
             Parent root = loader.load();
 
-            ModalHController controller = loader.getController();
+            modalI controller = loader.getController();
             controller.setPersona(persona);
 
             Stage stage = new Stage();

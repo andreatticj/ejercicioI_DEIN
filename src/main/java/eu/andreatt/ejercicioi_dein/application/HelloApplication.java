@@ -23,9 +23,9 @@ public class HelloApplication extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/eu/andreatt/ejercicioh_dein/fxml/ejercicioH.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/eu/andreatt/ejercicioi_dein/fxml/ejercicioI.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 450);
-        Image icon = new Image(getClass().getResourceAsStream("/eu/andreatt/ejercicioh_dein/images/agenda.png"));
+        Image icon = new Image(getClass().getResourceAsStream("/eu/andreatt/ejercicioi_dein/images/agenda.png"));
         stage.getIcons().add(icon);
         stage.setMinHeight(300);
         stage.setMinWidth(350);
