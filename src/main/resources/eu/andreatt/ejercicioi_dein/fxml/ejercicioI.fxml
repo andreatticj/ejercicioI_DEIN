@@ -56,7 +56,7 @@
                   <Image url="@../images/contactos.jpeg" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" text="Filtrar por nombre:" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Filtrar por nombre:" />
             <TextField fx:id="txtFiltro" alignment="CENTER" />
          </children>
       </HBox>
@@ -80,6 +80,9 @@
                </HBox.margin>
             </Button>
          </children>
+         <BorderPane.margin>
+            <Insets top="8.0" />
+         </BorderPane.margin>
       </HBox>
    </bottom>
 </BorderPane>

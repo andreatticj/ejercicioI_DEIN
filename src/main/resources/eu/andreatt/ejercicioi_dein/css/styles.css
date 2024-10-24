@@ -1,0 +1,14 @@
+.button{
+    -fx-text-fill: white;
+    -fx-color: magenta;
+    -fx-border-radius: 100%;
+    -fx-padding: 3 6 6 6;
+}
+#tabla{
+    -fx-base: magenta;
+        -fx-control-inner-background: white;
+        -fx-background-color: white;
+        -fx-table-cell-border-color: magenta;
+        -fx-table-header-border-color: magenta;
+        -fx-padding: 5;
+}

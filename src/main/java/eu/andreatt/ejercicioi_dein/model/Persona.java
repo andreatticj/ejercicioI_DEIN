@@ -5,6 +5,8 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+import java.util.Objects;
+
 public class Persona {
     private IntegerProperty id;
     private StringProperty nombre;
@@ -68,5 +70,18 @@ public class Persona {
 
     public IntegerProperty edadProperty() {
         return edad;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Persona persona = (Persona) o;
+        return Objects.equals(nombre, persona.nombre) && Objects.equals(apellidos, persona.apellidos) && Objects.equals(edad, persona.edad);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, apellidos, edad);
     }
 }

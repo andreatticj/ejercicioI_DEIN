@@ -27,6 +27,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 500, 450);
         Image icon = new Image(getClass().getResourceAsStream("/eu/andreatt/ejercicioi_dein/images/agenda.png"));
         stage.getIcons().add(icon);
+        scene.getStylesheets().add(getClass() .getResource("/eu/andreatt/ejercicioi_dein/css/styles.css").toExternalForm());
         stage.setMinHeight(300);
         stage.setMinWidth(350);
         stage.setTitle("PERSONAS"); // Título de la ventana
