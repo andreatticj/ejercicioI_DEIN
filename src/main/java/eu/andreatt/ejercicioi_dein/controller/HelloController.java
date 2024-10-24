@@ -10,6 +10,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -44,11 +46,16 @@ public class HelloController {
     @FXML
     private TextField txtFiltro;
 
+    @FXML
+    private ImageView imgView;
+
     private ObservableList<Persona> listaPersonas = FXCollections.observableArrayList();
     private PersonaDAO personaDAO = new PersonaDAO();
 
     @FXML
     public void initialize() {
+        Image icon = new Image(getClass().getResourceAsStream("/eu/andreatt/ejercicioi_dein/images/contactos.jpeg"));
+        imgView.setImage(icon);
         colNombre.setCellValueFactory(cellData -> cellData.getValue().nombreProperty());
         colApellido.setCellValueFactory(cellData -> cellData.getValue().apellidosProperty());
         colEdad.setCellValueFactory(cellData -> cellData.getValue().edadProperty().asObject());
