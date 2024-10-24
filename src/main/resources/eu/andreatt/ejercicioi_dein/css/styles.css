@@ -1,14 +1,35 @@
-.button{
+/* Estilo para botones */
+.button {
+    -fx-background-color: #CC6699;
     -fx-text-fill: white;
-    -fx-color: magenta;
-    -fx-border-radius: 100%;
-    -fx-padding: 3 6 6 6;
 }
-#tabla{
-    -fx-base: magenta;
-        -fx-control-inner-background: white;
-        -fx-background-color: white;
-        -fx-table-cell-border-color: magenta;
-        -fx-table-header-border-color: magenta;
-        -fx-padding: 5;
+
+/* Estilo para encabezados de columnas de TableView */
+.table-view .column-header {
+    -fx-background-color: #CC6699;
+    -fx-text-fill: white;
+    -fx-border-color: #FF99CC;
+    -fx-border-width: 1;
+}
+
+/* Estilo para filas pares de TableView */
+.table-row-cell:odd {
+    -fx-background-color: #FFCCCC;
+    -fx-border-color: #FF99CC;
+    -fx-border-width: 1;
+}
+
+/* Estilo para filas impares de TableView */
+.table-row-cell:even {
+    -fx-background-color: white;
+    -fx-border-color: #FF99CC;
+    -fx-border-width: 1;
+}
+
+/* Estilo para filas seleccionadas al hacer clic en TableView */
+.table-row-cell:selected {
+    -fx-background-color: #800080;
+    -fx-text-fill: white;
+    -fx-border-color: #FF99CC;
+    -fx-border-width: 1;
 }
