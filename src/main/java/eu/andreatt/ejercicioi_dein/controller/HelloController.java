@@ -50,7 +50,7 @@ public class HelloController {
     private ImageView imgView;
 
     private ObservableList<Persona> listaPersonas = FXCollections.observableArrayList();
-    private PersonaDAO personaDAO = new PersonaDAO();
+    private PersonaDAO personaDAO;
 
     @FXML
     public void initialize() {
@@ -59,6 +59,7 @@ public class HelloController {
         colEdad.setCellValueFactory(cellData -> cellData.getValue().edadProperty().asObject());
 
         try {
+            personaDAO = new PersonaDAO();
             cargarPersonas();
         } catch (SQLException e) {
             mostrarAlert(null, Alert.AlertType.ERROR,"ERROR","Error al cargar las personas: " + e.getMessage());
