@@ -26,7 +26,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // Define el idioma que deseas utilizar
-        Locale locale = new Locale("eus"); // Cambia a "en" o "eus" según el idioma
+        Locale locale = new Locale("en"); // Cambia a "en" o "eus" según el idioma
         ResourceBundle bundle = ResourceBundle.getBundle("eu.andreatt.ejercicioi_dein.idiomas.messages", locale);
 
 
@@ -37,7 +37,8 @@ public class HelloApplication extends Application {
         scene.getStylesheets().add(getClass() .getResource("/eu/andreatt/ejercicioi_dein/css/styles.css").toExternalForm());
         stage.setMinHeight(300);
         stage.setMinWidth(350);
-        stage.setTitle("PERSONAS"); // Título de la ventana
+        String title = bundle.getString("window.title");
+        stage.setTitle(title); // Título de la ventana
         stage.setScene(scene);
         stage.show(); // Mostrar la ventana
     }
