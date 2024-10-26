@@ -7,6 +7,8 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * La clase {@code HelloApplication} es la entrada principal de la aplicación JavaFX.
@@ -23,7 +25,12 @@ public class HelloApplication extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/eu/andreatt/ejercicioi_dein/fxml/ejercicioI.fxml"));
+        // Define el idioma que deseas utilizar
+        Locale locale = new Locale("eus"); // Cambia a "en" o "eus" según el idioma
+        ResourceBundle bundle = ResourceBundle.getBundle("eu.andreatt.ejercicioi_dein.idiomas.messages", locale);
+
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/eu/andreatt/ejercicioi_dein/fxml/ejercicioI.fxml"),bundle);
         Scene scene = new Scene(fxmlLoader.load(), 500, 450);
         Image icon = new Image(getClass().getResourceAsStream("/eu/andreatt/ejercicioi_dein/images/agenda.png"));
         stage.getIcons().add(icon);
